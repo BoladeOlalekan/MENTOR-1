@@ -137,5 +137,185 @@ header{
 }
 
 .graphic-design{
-    background: url(/images/mobile/image-graphic-design.jpg);
+    position: relative;
+   
+    .graphic-design-main{
+        position: absolute;
+        top: 65%;
+        width: 100%;
+        text-align: center;
+        color: hsl(167, 40%, 24%);
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        //opacity: 0.9;
+    }
+
+    h2{
+        font-family: Fraunces, sans-serif;
+        font-size: 28px;
+        font-weight: 900;
+    }
+
+    p{
+        font-family: Barlow, sans-serif;
+        font-size: 18px;
+        margin: 1.5rem  1.5rem auto 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+    }
+}
+
+.photography{
+    position: relative;
+   
+    .photography-main{
+        position: absolute;
+        top: 65%;
+        width: 100%;
+        text-align: center;
+        color: hsl(198, 62%, 26%);
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        //opacity: 0.9;
+    }
+
+    h2{
+        font-family: Fraunces, sans-serif;
+        font-size: 28px;
+        font-weight: 900;
+    }
+
+    p{
+        font-family: Barlow, sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 1.5rem  2rem auto 2rem;
+        line-height: 2rem;
+    }
+}
+
+.testimonials{
+    background-color: hsl(0, 0%, 100%); 
+
+    h2{
+        display: block;
+        padding: 3.5rem 1rem;
+        text-align: center;
+        color: hsl(210, 4%, 67%);
+        font-family: Fraunces, sans-serif;
+        font-weight: 700;
+    }
+
+    .emily{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        img{
+            border-radius: 10rem;
+        }
+
+        p{
+            font-family: Barlow, sans-serif;
+            font-weight: 600;
+            color: hsl(213, 9%, 39%);
+            margin: 2.5rem 3.4rem;
+            font-size: 19px;
+            line-height: 2rem;
+        }
+
+        h3{
+            color: hsl(212, 27%, 19%);
+            font-weight: 900;
+            font-family: Fraunces, sans-serif;
+        }
+
+        .post{
+            margin-top: 0rem;
+            display: block;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            color: hsl(210, 4%, 67%);
+        }
+    }
+    
+    .thomas{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        img{
+            border-radius: 10rem;
+        }
+
+        p{
+            font-family: Barlow, sans-serif;
+            font-weight: 600;
+            color: hsl(213, 9%, 39%);
+            margin: 2.5rem 3rem;
+            font-size: 19px;
+            line-height: 2rem;
+        }
+
+        h3{
+            color: hsl(212, 27%, 19%);
+            font-weight: 900;
+            font-family: Fraunces, sans-serif;
+        }
+
+        .post{
+            margin-top: 0rem;
+            display: block;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            color: hsl(210, 4%, 67%);
+        }
+    }
+
+    .Jennie{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        img{
+            border-radius: 10rem;
+        }
+
+        p{
+            font-family: Barlow, sans-serif;
+            font-weight: 600;
+            color: hsl(213, 9%, 39%);
+            margin: 2.5rem 3rem;
+            font-size: 19px;
+            line-height: 2rem;
+        }
+
+        h3{
+            color: hsl(212, 27%, 19%);
+            font-weight: 900;
+            font-family: Fraunces, sans-serif;
+        }
+
+        .post{
+            margin-top: 0rem;
+            display: block;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            color: hsl(210, 4%, 67%);
+        }
+    }
+}
+
+.img-grid{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-gap: 0;
+    gap: 0;
 }
