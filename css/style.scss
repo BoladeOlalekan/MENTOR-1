@@ -313,9 +313,13 @@ header{
 }
 
 .img-grid{
-    display: grid;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr;
-    grid-gap: 0;
-    gap: 0;
+    position: relative;
+    .img-container{
+        display: grid;
+        grid-template-columns: 1fr, 1fr;
+        grid-template-rows: 1fr, 1fr;
+        grid-gap: 0;
+        gap: 0;
+        width: 100%;
+    }
 }

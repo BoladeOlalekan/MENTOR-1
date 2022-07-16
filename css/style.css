@@ -269,9 +269,13 @@
 }
 
 .img-grid {
+  position: relative;
+}
+.img-grid .img-container {
   display: grid;
   grid-template-columns: 1fr, 1fr;
   grid-template-rows: 1fr, 1fr;
   grid-gap: 0;
   gap: 0;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
