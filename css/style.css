@@ -120,4 +120,16 @@
 
 .graphic-design {
   background: url(/images/mobile/image-graphic-design.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.graphic-design h2 {
+  position: absolute;
+  top: 30rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
