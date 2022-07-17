@@ -119,6 +119,7 @@
 }
 
 .graphic-design {
+<<<<<<< HEAD
   background: url(/images/mobile/image-graphic-design.jpg);
   background-position: center;
   background-size: cover;
@@ -132,4 +133,199 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+=======
+  position: relative;
+}
+.graphic-design .graphic-design-main {
+  position: absolute;
+  top: 65%;
+  width: 100%;
+  text-align: center;
+  color: hsl(167deg, 40%, 24%);
+}
+.graphic-design img {
+  width: 100%;
+  height: auto;
+}
+.graphic-design h2 {
+  font-family: Fraunces, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+}
+.graphic-design p {
+  font-family: Barlow, sans-serif;
+  font-size: 18px;
+  margin: 1.5rem 1.5rem auto 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.photography {
+  position: relative;
+}
+.photography .photography-main {
+  position: absolute;
+  top: 65%;
+  width: 100%;
+  text-align: center;
+  color: hsl(198deg, 62%, 26%);
+}
+.photography img {
+  width: 100%;
+  height: auto;
+}
+.photography h2 {
+  font-family: Fraunces, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+}
+.photography p {
+  font-family: Barlow, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 1.5rem 2rem auto 2rem;
+  line-height: 2rem;
+}
+
+.testimonials {
+  background-color: hsl(0deg, 0%, 100%);
+}
+.testimonials h2 {
+  display: block;
+  padding: 3.5rem 1rem;
+  text-align: center;
+  color: hsl(210deg, 4%, 67%);
+  font-family: Fraunces, sans-serif;
+  font-weight: 700;
+}
+.testimonials .emily {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.testimonials .emily img {
+  border-radius: 10rem;
+}
+.testimonials .emily p {
+  font-family: Barlow, sans-serif;
+  font-weight: 600;
+  color: hsl(213deg, 9%, 39%);
+  margin: 2.5rem 3.4rem;
+  font-size: 19px;
+  line-height: 2rem;
+}
+.testimonials .emily h3 {
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 900;
+  font-family: Fraunces, sans-serif;
+}
+.testimonials .emily .post {
+  margin-top: 0rem;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: hsl(210deg, 4%, 67%);
+}
+.testimonials .thomas {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.testimonials .thomas img {
+  border-radius: 10rem;
+}
+.testimonials .thomas p {
+  font-family: Barlow, sans-serif;
+  font-weight: 600;
+  color: hsl(213deg, 9%, 39%);
+  margin: 2.5rem 3rem;
+  font-size: 19px;
+  line-height: 2rem;
+}
+.testimonials .thomas h3 {
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 900;
+  font-family: Fraunces, sans-serif;
+}
+.testimonials .thomas .post {
+  margin-top: 0rem;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: hsl(210deg, 4%, 67%);
+}
+.testimonials .Jennie {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.testimonials .Jennie img {
+  border-radius: 10rem;
+}
+.testimonials .Jennie p {
+  font-family: Barlow, sans-serif;
+  font-weight: 600;
+  color: hsl(213deg, 9%, 39%);
+  margin: 2.5rem 3rem;
+  font-size: 19px;
+  line-height: 2rem;
+}
+.testimonials .Jennie h3 {
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 900;
+  font-family: Fraunces, sans-serif;
+}
+.testimonials .Jennie .post {
+  margin-top: 0rem;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: hsl(210deg, 4%, 67%);
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.img-grid img {
+  width: 100%;
+}
+
+footer {
+  background: hsl(210deg, 4%, 67%);
+  text-align: center;
+}
+footer .footer-img {
+  display: block;
+}
+footer .footer-img img {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  fill: blue;
+  background: red;
+  color: yellow;
+}
+footer .links {
+  margin: auto 2.5rem 5rem 1.5rem;
+}
+footer .links ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .links ul a {
+  color: hsl(212deg, 27%, 19%);
+  font-size: 18px;
+  font-family: Barlow, sans-serif;
+  font-weight: 600;
+}
+footer .social-links {
+  padding-bottom: 5rem;
+  color: hsl(212deg, 27%, 19%);
+}
+footer .social-links a {
+  margin-right: 2rem;
+}
+footer .social-links a img {
+  color: hsl(212deg, 27%, 19%);
+>>>>>>> 8af6c0a15192cb0643a48a56624ecd0189e19b4e
 }/*# sourceMappingURL=style.css.map */
