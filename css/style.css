@@ -36,7 +36,19 @@
   margin: 2rem auto auto 1.3rem;
 }
 .container nav {
-  display: none;
+  list-style-type: none;
+  font-family: Barlow, sans-serif;
+  background-color: white;
+  position: fixed;
+  width: 60%;
+  padding: 2rem 4rem;
+  margin-left: 3rem;
+  z-index: 1;
+}
+.container nav .nav-list {
+  color: hsl(232deg, 10%, 55%);
+  display: block;
+  padding: 2em;
 }
 .container header {
   display: flexbox;
@@ -314,10 +326,11 @@ footer .courtesy {
   text-align: center;
   font-family: Barlow, sans-serif;
   font-size: 1.2rem;
-  padding: 1.5 auto;
+  padding: 2.5rem auto;
   background-color: hsl(213deg, 9%, 39%);
   position: -webkit-sticky;
   position: sticky;
+  color: hsl(7deg, 99%, 70%);
 }
 footer .courtesy a {
   color: pink;
