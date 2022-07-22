@@ -278,5 +278,47 @@
 
 footer {
   background-color: hsl(168deg, 34%, 41%);
+}
+footer .footer-logo {
+  filter: invert(53%) sepia(7%) saturate(2574%) hue-rotate(118deg) brightness(50%) contrast(86%);
+  margin: auto;
+  display: block;
+  padding-top: 3rem;
+  width: 10rem;
+}
+footer .links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 0;
+  font-family: Barlow, sans-serif;
+  font-size: 1.2rem;
+}
+footer .links a {
+  color: hsl(167deg, 40%, 24%);
+}
+footer .social-links {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+footer .social-links img {
+  filter: invert(53%) sepia(7%) saturate(200%) hue-rotate(118deg) brightness(50%) contrast(86%);
+}
+footer .courtesy {
   text-align: center;
+  font-family: Barlow, sans-serif;
+  font-size: 1.2rem;
+  padding: 1.5 auto;
+  background-color: hsl(213deg, 9%, 39%);
+  position: -webkit-sticky;
+  position: sticky;
+}
+footer .courtesy a {
+  color: pink;
 }/*# sourceMappingURL=style.css.map */

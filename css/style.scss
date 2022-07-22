@@ -323,5 +323,56 @@ header{
 
 footer{
     background-color: hsl(168, 34%, 41%);
-    text-align: center;
+
+    .footer-logo{
+        filter: invert(53%) sepia(7%) saturate(2574%) hue-rotate(118deg) brightness(50%) contrast(86%);
+        margin: auto;
+        display: block;
+        padding-top: 3rem;
+        width: 10rem;
+    }
+
+    .links{
+        ul{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 3rem;
+            padding: 2rem 0;
+            font-family: Barlow, sans-serif;
+            font-size: 1.2rem;
+        }
+
+        a{
+            color: hsl(167, 40%, 24%);
+        }
+    }
+
+    .social-links{
+        display: flex;
+        flex-direction: row;
+        margin-top: 3rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding-bottom: 3rem;
+
+        img{
+            filter: invert(53%) sepia(7%) saturate(200%) hue-rotate(118deg) brightness(50%) contrast(86%);
+
+        }
+    }
+
+    .courtesy{
+        text-align: center;
+        font-family: Barlow, sans-serif;
+        font-size: 1.2rem;
+        padding: 1.5 auto;
+        background-color: hsl(213, 9%, 39%);
+        position: sticky;
+
+        a{
+            color: pink;
+        }
+    }
 }
