@@ -2,6 +2,7 @@
     list-style: none;
     text-decoration: none;
     margin: 0;
+    padding: 0;
 }
 
 .container{
@@ -29,31 +30,57 @@
     .arrow{
         display: block;
         position: relative;
-        top: 43%;
+        top: 41%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
 .logo-img{
-    margin: 2rem auto auto 1.3rem;
+    margin: 3rem auto auto 1.3rem;
 }
 
 nav{
-    list-style-type: none;
-    font-family: Barlow, sans-serif;
-    background-color: white;
-    position: fixed;
-    width: 60%;
-    padding: 2rem 4rem;
-    margin-left: 3rem;
+    display: none;
+    transition: .3s;
     z-index: 1;
+    position: fixed;
+    background: hsl(0, 0%, 100%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: auto 2rem;
+    margin-top: 4.8rem;
+    clip-path: polygon(25% 7%, 94% 7%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 7%);
+    
+    ul{
+        text-align: center;
+        margin: 3rem 5rem 4rem 5rem;
+    }        
+
+    li{
+        padding: 1.5rem 2rem 3rem 2rem;
+    }
 
     .nav-list{
-        //display: inline-block;
-        //margin: 1rem 1.25rem;
-        color: hsl(232, 10%, 55%);
-        display: block;
-        padding: 2em;
+        color: hsl(168, 34%, 41%);
+        font-family: Barlow, sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    button{
+        border: none;
+        border-radius: 3rem;
+        background: hsl(51, 100%, 49%);
+        padding: .8rem 1.5rem;
+        margin-bottom: 1rem;
+
+        a{
+            color: black;
+            font-family: Fraunces, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+        }
     }
 }   
 
@@ -61,9 +88,9 @@ header{
     display: flexbox;
     justify-content: space-between;
 
-    #toggle-open-menu{
+    .menu-Btn{
         margin-right: 1.3rem;
-        margin-top: 2rem;
+        margin-top: 3rem;
         cursor: pointer;
         float: right;
         font-size: 24px;
@@ -382,7 +409,7 @@ footer{
         text-align: center;
         font-family: Barlow, sans-serif;
         font-size: 1.2rem;
-        padding: 2.5rem auto;
+        padding: 3rem auto;
         background-color: hsl(213, 9%, 39%);
         position: sticky;
         color: hsl(7, 99%, 70%);
@@ -391,4 +418,8 @@ footer{
             color: pink;
         }
     }
+}
+
+.show-menu{
+    display: block;
 }
