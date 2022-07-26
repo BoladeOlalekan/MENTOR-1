@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   background: url(/images/mobile/image-header.jpg);
   background-size: cover;
@@ -36,41 +40,40 @@
 .container .logo-img {
   margin: 3rem auto auto 1.3rem;
 }
-.container nav {
+.container .nav-menu {
   display: none;
   transition: 0.3s;
   z-index: 1;
   position: fixed;
   background: hsl(0deg, 0%, 100%);
   left: 50%;
-  transform: translateX(-50%);
   width: 90%;
   padding: auto 2rem;
   margin-top: 4.8rem;
   -webkit-clip-path: polygon(25% 7%, 94% 7%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 7%);
           clip-path: polygon(25% 7%, 94% 7%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 7%);
 }
-.container nav ul {
+.container .nav-menu ul {
   text-align: center;
   margin: 3rem 5rem 4rem 5rem;
 }
-.container nav li {
+.container .nav-menu li {
   padding: 1.5rem 2rem 3rem 2rem;
 }
-.container nav .nav-list {
+.container .nav-menu .nav-list {
   color: hsl(168deg, 34%, 41%);
   font-family: Barlow, sans-serif;
   font-weight: 600;
   font-size: 18px;
 }
-.container nav button {
+.container .nav-menu button {
   border: none;
   border-radius: 3rem;
   background: hsl(51deg, 100%, 49%);
   padding: 0.8rem 1.5rem;
   margin-bottom: 1rem;
 }
-.container nav button a {
+.container .nav-menu button a {
   color: black;
   font-family: Fraunces, sans-serif;
   font-size: 18px;
@@ -80,12 +83,31 @@
   display: flexbox;
   justify-content: space-between;
 }
-.container header .menu-Btn {
-  margin-right: 1.3rem;
-  margin-top: 3rem;
+.container header .burger-menu {
+  display: block;
+  margin: auto;
   cursor: pointer;
-  float: right;
-  font-size: 24px;
+  position: absolute;
+  top: 43px;
+  right: 19px;
+}
+.container header .burger-menu div {
+  width: 22px;
+  height: 1px;
+  background-color: white;
+  margin: 6px;
+  border-radius: 5px;
+}
+.container header .burger-menu .toggle .bar1 {
+  transform: rotate(45deg) translate(4px, 4px);
+  -webkit-transform: rotate(45deg) translate(4px, 4px);
+}
+.container header .burger-menu .toggle .bar2 {
+  opacity: 0;
+}
+.container header .burger-menu .toggle .bar3 {
+  transform: rotate(-45deg) translate(6px, -7px);
+  -webkit-transform: rotate(-45deg) translate(6px, -7px);
 }
 
 .egg img {
@@ -150,6 +172,7 @@
   font-family: Fraunces, sans-serif;
   margin-top: 2rem;
   margin-bottom: 4rem;
+  position: relative;
 }
 .stand-out-text h4 a {
   color: black;
