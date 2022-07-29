@@ -11,7 +11,7 @@ html{
 
 .nav-menu{
     opacity: 0;
-    height: 0;
+    //height: 0;
 }
 
 .container{
@@ -115,6 +115,7 @@ html{
             position: absolute;
             top: 43px;
             right: 19px;
+
             div{
                 width: 22px;
                 height: 1px;
@@ -497,7 +498,6 @@ footer{
 
 .show-menu{
     opacity: 1;
-    height: auto;
 }
 
 .toggle{
@@ -516,4 +516,81 @@ footer{
         -webkit-transform: rotate(-45deg) translate(6px, -7px);
         transition: .3s;
     }
+}
+
+@media only screen and (min-width: 830px) {
+    .container{
+        background: url(/images/desktop/image-header.jpg);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+
+    .burger-menu{
+        div{
+            display: none;
+        }
+    }
+
+    nav{
+        background: none;
+    }
+
+    .nav-menu{
+        opacity: 1;
+        transition: .3s;
+        z-index: 1;
+        position: relative;
+        background: none;
+        left: 0;
+        transform: translateX(0%);
+        width: fit-content;
+        padding: 0;
+        margin-top: 0;
+        clip-path: unset;
+    
+        ul{
+            text-align: left;
+            margin: 0;
+        }        
+
+        li{
+            padding: 0;
+        }
+
+        .nav-list{
+            color: hsl(168, 34%, 41%);
+            font-family: Barlow, sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+
+            &:hover{
+                color: #3ebfff;
+            }
+        }
+
+        button{
+            border: none;
+            border-radius: 3rem;
+            background: hsl(51, 100%, 49%);
+            padding: .8rem 1.5rem;
+            margin-bottom: 1rem;
+
+            a{
+                color: black;
+                font-family: Fraunces, sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            &:hover{
+                a{
+                    color: hsl(51, 100%, 49%);
+                }
+                background: black;
+                transition: .3s;
+            }
+        }
+    }   
 }

@@ -11,7 +11,6 @@ html {
 
 .nav-menu {
   opacity: 0;
-  height: 0;
 }
 
 .container {
@@ -425,7 +424,6 @@ footer .courtesy a {
 
 .show-menu {
   opacity: 1;
-  height: auto;
 }
 
 .toggle .bar1 {
@@ -440,4 +438,72 @@ footer .courtesy a {
   transform: rotate(-45deg) translate(6px, -7px);
   -webkit-transform: rotate(-45deg) translate(6px, -7px);
   transition: 0.3s;
+}
+
+@media only screen and (min-width: 830px) {
+  .container {
+    background: url(/images/desktop/image-header.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  .burger-menu div {
+    display: none;
+  }
+  nav {
+    background: none;
+  }
+  .nav-menu {
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 1;
+    position: relative;
+    background: none;
+    left: 0;
+    transform: translateX(0%);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0;
+    margin-top: 0;
+    -webkit-clip-path: unset;
+            clip-path: unset;
+  }
+  .nav-menu ul {
+    text-align: left;
+    margin: 0;
+  }
+  .nav-menu li {
+    padding: 0;
+  }
+  .nav-menu .nav-list {
+    color: hsl(168deg, 34%, 41%);
+    font-family: Barlow, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .nav-menu .nav-list:hover {
+    color: #3ebfff;
+  }
+  .nav-menu button {
+    border: none;
+    border-radius: 3rem;
+    background: hsl(51deg, 100%, 49%);
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .nav-menu button a {
+    color: black;
+    font-family: Fraunces, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .nav-menu button:hover {
+    background: black;
+    transition: 0.3s;
+  }
+  .nav-menu button:hover a {
+    color: hsl(51deg, 100%, 49%);
+  }
 }/*# sourceMappingURL=style.css.map */
