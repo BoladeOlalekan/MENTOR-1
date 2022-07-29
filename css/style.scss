@@ -9,6 +9,11 @@ html{
     scroll-behavior: smooth;
 }
 
+.nav-menu{
+    opacity: 0;
+    height: 0;
+}
+
 .container{
     background: url(/images/mobile/image-header.jpg);
     background-size: cover;
@@ -44,13 +49,12 @@ html{
     }
 
     .nav-menu{
-        display: none;
         transition: .3s;
         z-index: 1;
         position: fixed;
         background: hsl(0, 0%, 100%);
         left: 50%;
-        //transform: translateX(-50%);
+        transform: translateX(-50%);
         width: 90%;
         padding: auto 2rem;
         margin-top: 4.8rem;
@@ -70,6 +74,10 @@ html{
             font-family: Barlow, sans-serif;
             font-weight: 600;
             font-size: 18px;
+
+            &:hover{
+                color: #3ebfff;
+            }
         }
 
         button{
@@ -84,6 +92,14 @@ html{
                 font-family: Fraunces, sans-serif;
                 font-size: 18px;
                 font-weight: 700;
+            }
+
+            &:hover{
+                a{
+                    color: hsl(51, 100%, 49%);
+                }
+                background: black;
+                transition: .3s;
             }
         }
     }   
@@ -106,22 +122,6 @@ html{
                 background-color: white;
                 margin: 6px;
                 border-radius: 5px;
-            }
-
-            .toggle{
-                .bar1{
-                    transform: rotate(45deg) translate(4px, 4px);
-                    -webkit-transform: rotate(45deg) translate(4px, 4px);
-                }
-
-                .bar2{
-                    opacity: 0;
-                }
-
-                .bar3{
-                    transform: rotate(-45deg) translate(6px, -7px);
-                    -webkit-transform: rotate(-45deg) translate(6px, -7px);
-                }
             }
         }   
     }
@@ -155,15 +155,38 @@ html{
     }
 
     h4{
-        a{
-            color: black;
-            font-weight: 900;
-        }
-
         font-size: 20px;
         font-family: Fraunces, sans-serif;
         margin-top: 2rem;
         margin-bottom: 4rem;
+        position: relative;
+        z-index: 999;
+
+        a{
+            color: black;
+            font-weight: 900;
+            
+            &::before{
+                content: '';
+                position: absolute;
+                width: 10rem; 
+                height: 8px;
+                background-color: hsl(51, 100%, 49%);
+                bottom: 2.5px;
+                opacity: .3;
+                z-index: -1;
+                border-radius: 5px;
+                margin-left: -5px; 
+            }
+        } 
+
+        &:hover{
+            a{
+                    &::before{
+                    opacity: .7;
+                }
+            }
+        }
     }
 }
 
@@ -200,10 +223,32 @@ html{
         margin-top: 2rem;
         margin-bottom: 4rem;
         position: relative;
+        z-index: 999;
 
         a{
             color: black;
             font-weight: 900;
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 10rem; 
+                height: 8px;
+                background-color: #fe7867;
+                bottom: 2.5px;
+                opacity: .3;
+                z-index: -1;
+                border-radius: 5px;
+                margin-left: -5px; 
+            }
+        }
+
+        &:hover{
+            a{
+                    &::before{
+                    opacity: .7;
+                }
+            }
         }
     }
 }
@@ -451,5 +496,22 @@ footer{
 }
 
 .show-menu{
-    display: block;
+    opacity: 1;
+    height: auto;
+}
+
+.toggle{
+    .bar1{
+        transform: rotate(45deg) translate(4px, 4px);
+        -webkit-transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    .bar2{
+        opacity: 0;
+    }
+
+    .bar3{
+        transform: rotate(-45deg) translate(6px, -7px);
+        -webkit-transform: rotate(-45deg) translate(6px, -7px);
+    }
 }

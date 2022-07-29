@@ -9,6 +9,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.nav-menu {
+  opacity: 0;
+  height: 0;
+}
+
 .container {
   background: url(/images/mobile/image-header.jpg);
   background-size: cover;
@@ -41,12 +46,12 @@ html {
   margin: 3rem auto auto 1.3rem;
 }
 .container .nav-menu {
-  display: none;
   transition: 0.3s;
   z-index: 1;
   position: fixed;
   background: hsl(0deg, 0%, 100%);
   left: 50%;
+  transform: translateX(-50%);
   width: 90%;
   padding: auto 2rem;
   margin-top: 4.8rem;
@@ -66,6 +71,9 @@ html {
   font-weight: 600;
   font-size: 18px;
 }
+.container .nav-menu .nav-list:hover {
+  color: #3ebfff;
+}
 .container .nav-menu button {
   border: none;
   border-radius: 3rem;
@@ -78,6 +86,13 @@ html {
   font-family: Fraunces, sans-serif;
   font-size: 18px;
   font-weight: 700;
+}
+.container .nav-menu button:hover {
+  background: black;
+  transition: 0.3s;
+}
+.container .nav-menu button:hover a {
+  color: hsl(51deg, 100%, 49%);
 }
 .container header {
   display: flexbox;
@@ -97,17 +112,6 @@ html {
   background-color: white;
   margin: 6px;
   border-radius: 5px;
-}
-.container header .burger-menu .toggle .bar1 {
-  transform: rotate(45deg) translate(4px, 4px);
-  -webkit-transform: rotate(45deg) translate(4px, 4px);
-}
-.container header .burger-menu .toggle .bar2 {
-  opacity: 0;
-}
-.container header .burger-menu .toggle .bar3 {
-  transform: rotate(-45deg) translate(6px, -7px);
-  -webkit-transform: rotate(-45deg) translate(6px, -7px);
 }
 
 .egg img {
@@ -138,10 +142,27 @@ html {
   font-family: Fraunces, sans-serif;
   margin-top: 2rem;
   margin-bottom: 4rem;
+  position: relative;
+  z-index: 999;
 }
 .transform-text h4 a {
   color: black;
   font-weight: 900;
+}
+.transform-text h4 a::before {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 8px;
+  background-color: hsl(51deg, 100%, 49%);
+  bottom: 2.5px;
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 5px;
+  margin-left: -5px;
+}
+.transform-text h4:hover a::before {
+  opacity: 0.7;
 }
 
 .cup img {
@@ -173,10 +194,26 @@ html {
   margin-top: 2rem;
   margin-bottom: 4rem;
   position: relative;
+  z-index: 999;
 }
 .stand-out-text h4 a {
   color: black;
   font-weight: 900;
+}
+.stand-out-text h4 a::before {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 8px;
+  background-color: #fe7867;
+  bottom: 2.5px;
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 5px;
+  margin-left: -5px;
+}
+.stand-out-text h4:hover a::before {
+  opacity: 0.7;
 }
 
 .graphic-design {
@@ -386,5 +423,18 @@ footer .courtesy a {
 }
 
 .show-menu {
-  display: block;
+  opacity: 1;
+  height: auto;
+}
+
+.toggle .bar1 {
+  transform: rotate(45deg) translate(4px, 4px);
+  -webkit-transform: rotate(45deg) translate(4px, 4px);
+}
+.toggle .bar2 {
+  opacity: 0;
+}
+.toggle .bar3 {
+  transform: rotate(-45deg) translate(6px, -7px);
+  -webkit-transform: rotate(-45deg) translate(6px, -7px);
 }/*# sourceMappingURL=style.css.map */
