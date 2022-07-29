@@ -115,13 +115,13 @@ html{
             position: absolute;
             top: 43px;
             right: 19px;
-
             div{
                 width: 22px;
                 height: 1px;
                 background-color: white;
                 margin: 6px;
                 border-radius: 5px;
+                transition: .3s;
             }
         }   
     }
@@ -504,6 +504,7 @@ footer{
     .bar1{
         transform: rotate(45deg) translate(4px, 4px);
         -webkit-transform: rotate(45deg) translate(4px, 4px);
+        transition: .3s;
     }
 
     .bar2{
@@ -513,5 +514,6 @@ footer{
     .bar3{
         transform: rotate(-45deg) translate(6px, -7px);
         -webkit-transform: rotate(-45deg) translate(6px, -7px);
+        transition: .3s;
     }
 }

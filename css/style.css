@@ -112,6 +112,7 @@ html {
   background-color: white;
   margin: 6px;
   border-radius: 5px;
+  transition: 0.3s;
 }
 
 .egg img {
@@ -430,6 +431,7 @@ footer .courtesy a {
 .toggle .bar1 {
   transform: rotate(45deg) translate(4px, 4px);
   -webkit-transform: rotate(45deg) translate(4px, 4px);
+  transition: 0.3s;
 }
 .toggle .bar2 {
   opacity: 0;
@@ -437,4 +439,5 @@ footer .courtesy a {
 .toggle .bar3 {
   transform: rotate(-45deg) translate(6px, -7px);
   -webkit-transform: rotate(-45deg) translate(6px, -7px);
+  transition: 0.3s;
 }/*# sourceMappingURL=style.css.map */
