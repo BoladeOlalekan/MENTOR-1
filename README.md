@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Screenshot
 
-!alt=Screenshot of the page[](/images/sunnyside%20screenshot.png)
+![Alt text](./images/sunnyside%20screenshot.png "Screenshot of page")
 
 ### Links
 
