@@ -9,9 +9,12 @@ html{
     scroll-behavior: smooth;
 }
 
-.nav-menu{
-    opacity: 0;
-    //height: 0;
+nav{
+    display: none;
+}
+
+.desktop{
+    display: none;
 }
 
 .container{
@@ -34,12 +37,16 @@ html{
         font-family: Fraunces, sans-serif;
         font-weight: 700;
         letter-spacing: .2em;
+
+        span{
+            display: block;
+        }
     }
 
     .arrow{
         display: block;
         position: relative;
-        top: 41%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -48,14 +55,14 @@ html{
         margin: 3rem auto auto 1.3rem;
     }
 
-    .nav-menu{
-        transition: .3s;
-        z-index: 1;
-        position: fixed;
-        background: hsl(0, 0%, 100%);
-        left: 50%;
+    nav{
         transform: translateX(-50%);
+        position: fixed;
+        left: 50%;
         width: 90%;
+        background: hsl(0, 0%, 100%);
+        transition: .3s;
+        z-index: 999;
         padding: auto 2rem;
         margin-top: 4.8rem;
         clip-path: polygon(25% 7%, 94% 7%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 7%);
@@ -77,6 +84,7 @@ html{
 
             &:hover{
                 color: #3ebfff;
+                transition: .3s;
             }
         }
 
@@ -105,7 +113,7 @@ html{
     }   
 
     header{
-        display: flexbox;
+        display: flex;
         justify-content: space-between;
 
         .burger-menu {
@@ -144,11 +152,11 @@ html{
         font-family: Fraunces, sans-serif;
         font-weight: 900;
         margin: 3rem .5rem 1.5rem .5rem;
-        font-size: 2.21rem;
+        font-size: 32px;
     }
 
     p{
-        font-size: 22px;
+        font-size: 18px;
         font-family: Barlow, sans-serif;
         font-weight: 600;
         color: hsl(213, 9%, 39%);
@@ -207,11 +215,11 @@ html{
         font-family: Fraunces, sans-serif;
         font-weight: 900;
         margin: 3rem 1.5rem 1.5rem 1.5rem;
-        font-size: 2.21rem;
+        font-size: 32px;
     }
 
     p{
-        font-size: 22px;
+        font-size: 18px;
         font-family: Barlow, sans-serif;
         font-weight: 600;
         color: hsl(213, 9%, 39%);
@@ -268,7 +276,6 @@ html{
     img{
         width: 100%;
         height: auto;
-        //opacity: 0.9;
     }
 
     h2{
@@ -300,7 +307,6 @@ html{
     img{
         width: 100%;
         height: auto;
-        //opacity: 0.9;
     }
 
     h2{
@@ -328,6 +334,7 @@ html{
         color: hsl(210, 4%, 67%);
         font-family: Fraunces, sans-serif;
         font-weight: 700;
+        letter-spacing: .2rem;
     }
 
     .emily{
@@ -432,7 +439,7 @@ html{
 
 .img-grid{
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: repeat(2 , 1fr);
     
     img{
         width: 100%;
@@ -485,19 +492,26 @@ footer{
         text-align: center;
         font-family: Barlow, sans-serif;
         font-size: 1.2rem;
-        padding: 3rem auto;
+        padding-top: .3rem;
+        padding-bottom: .5rem;
         background-color: hsl(213, 9%, 39%);
         position: sticky;
-        color: hsl(7, 99%, 70%);
+        color: pink;
 
         a{
-            color: pink;
+            color: hsl(7, 99%, 70%);
+
+            &:hover{
+                color: #3ebfff;
+                transition: .3s;
+            }
         }
     }
 }
 
 .show-menu{
-    opacity: 1;
+    display: block;
+    transition: .3s;
 }
 
 .toggle{
@@ -518,79 +532,182 @@ footer{
     }
 }
 
-@media only screen and (min-width: 830px) {
+@media only screen and (min-width: 580px) {
+    .container{
+        .arrow{
+            position: relative;
+            top: 50%;
+        }    
+    }
+}
+
+@media only screen and (min-width: 912px) {
+    body{
+        margin-right: 0;
+    }
+
+    .mobile{
+        display: none;
+    }
+    
+    .desktop{
+        display: block;
+        width: 100%;
+    }
+
     .container{
         background: url(/images/desktop/image-header.jpg);
-        height: 100vh;
+        height: 100%;
+        width: 100%;
         background-size: cover;
         background-position: center;
         z-index: -1;
-    }
 
-    .burger-menu{
-        div{
-            display: none;
-        }
-    }
-
-    nav{
-        background: none;
-    }
-
-    .nav-menu{
-        opacity: 1;
-        transition: .3s;
-        z-index: 1;
-        position: relative;
-        background: none;
-        left: 0;
-        transform: translateX(0%);
-        width: fit-content;
-        padding: 0;
-        margin-top: 0;
-        clip-path: unset;
-    
-        ul{
-            text-align: left;
-            margin: 0;
-        }        
-
-        li{
-            padding: 0;
+        .arrow{
+            position: relative;
+            top: 40%;
         }
 
-        .nav-list{
-            color: hsl(168, 34%, 41%);
-            font-family: Barlow, sans-serif;
-            font-weight: 600;
-            font-size: 18px;
-
-            &:hover{
-                color: #3ebfff;
+        h1{
+            span{
+                display: unset;
             }
         }
 
-        button{
-            border: none;
-            border-radius: 3rem;
-            background: hsl(51, 100%, 49%);
-            padding: .8rem 1.5rem;
-            margin-bottom: 1rem;
-
-            a{
-                color: black;
-                font-family: Fraunces, sans-serif;
-                font-size: 18px;
-                font-weight: 700;
+        .burger-menu{
+            div{
+                display: none;
             }
+        }
 
-            &:hover{
-                a{
-                    color: hsl(51, 100%, 49%);
+        nav{
+            transform: translateX(0%);
+            position: unset;
+            background: none;
+            transition: .3s;
+            z-index: 999;
+            clip-path: unset;
+
+            ul{
+                display: flex;
+                position: absolute;
+                top: -50px;
+                right: -80px;
+                float: right;
+                margin-top: 0;
+
+                .nav-list{
+                    color: hsl(0, 0%, 100%);
+
+                    &:hover{
+                        color: #feb800;
+                        transition: .3s;
+                    }
                 }
-                background: black;
-                transition: .3s;
+
+                button{
+                    margin-top: -12px;
+                    background: hsl(0, 0%, 100%);
+                }
             }
         }
-    }   
+
+        nav{
+            display: block;
+        }
+    }
+
+    .transform{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "left right";
+
+        .transform-text{
+            grid-area: left;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            h2{
+                text-align: left;
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 1rem;
+
+                span{
+                    display: block;
+                }
+            }
+
+            p{
+                text-align: left;
+            }
+
+            h4{
+                text-align: left;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .stand-out{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 0;
+
+        .stand-out-text{
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            h2{
+                text-align: left;
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 1rem;
+            }
+
+            p{
+                text-align: left;
+            }
+
+            h4{
+                text-align: left;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .graphic-photo{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+
+        .graphic-design{
+            position: relative;
+
+            .graphic-design-main{
+                position: absolute;
+                top: 55%;
+            }
+        }
+
+        .photography{
+            position: relative;
+
+            .photography-main{
+                position: absolute;
+                top: 55%;
+            }
+        }
+    }
+
+    .testimonial-grid{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .img-grid{
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+    }
 }

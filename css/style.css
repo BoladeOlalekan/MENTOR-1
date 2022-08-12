@@ -9,8 +9,12 @@ html {
   scroll-behavior: smooth;
 }
 
-.nav-menu {
-  opacity: 0;
+nav {
+  display: none;
+}
+
+.desktop {
+  display: none;
 }
 
 .container {
@@ -34,67 +38,71 @@ html {
   font-weight: 700;
   letter-spacing: 0.2em;
 }
+.container h1 span {
+  display: block;
+}
 .container .arrow {
   display: block;
   position: relative;
-  top: 41%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .container .logo-img {
   margin: 3rem auto auto 1.3rem;
 }
-.container .nav-menu {
-  transition: 0.3s;
-  z-index: 1;
-  position: fixed;
-  background: hsl(0deg, 0%, 100%);
-  left: 50%;
+.container nav {
   transform: translateX(-50%);
+  position: fixed;
+  left: 50%;
   width: 90%;
+  background: hsl(0deg, 0%, 100%);
+  transition: 0.3s;
+  z-index: 999;
   padding: auto 2rem;
   margin-top: 4.8rem;
   -webkit-clip-path: polygon(25% 7%, 94% 7%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 7%);
           clip-path: polygon(25% 7%, 94% 7%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 7%);
 }
-.container .nav-menu ul {
+.container nav ul {
   text-align: center;
   margin: 3rem 5rem 4rem 5rem;
 }
-.container .nav-menu li {
+.container nav li {
   padding: 1.5rem 2rem 3rem 2rem;
 }
-.container .nav-menu .nav-list {
+.container nav .nav-list {
   color: hsl(168deg, 34%, 41%);
   font-family: Barlow, sans-serif;
   font-weight: 600;
   font-size: 18px;
 }
-.container .nav-menu .nav-list:hover {
+.container nav .nav-list:hover {
   color: #3ebfff;
+  transition: 0.3s;
 }
-.container .nav-menu button {
+.container nav button {
   border: none;
   border-radius: 3rem;
   background: hsl(51deg, 100%, 49%);
   padding: 0.8rem 1.5rem;
   margin-bottom: 1rem;
 }
-.container .nav-menu button a {
+.container nav button a {
   color: black;
   font-family: Fraunces, sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
-.container .nav-menu button:hover {
+.container nav button:hover {
   background: black;
   transition: 0.3s;
 }
-.container .nav-menu button:hover a {
+.container nav button:hover a {
   color: hsl(51deg, 100%, 49%);
 }
 .container header {
-  display: flexbox;
+  display: flex;
   justify-content: space-between;
 }
 .container header .burger-menu {
@@ -128,10 +136,10 @@ html {
   font-family: Fraunces, sans-serif;
   font-weight: 900;
   margin: 3rem 0.5rem 1.5rem 0.5rem;
-  font-size: 2.21rem;
+  font-size: 32px;
 }
 .transform-text p {
-  font-size: 22px;
+  font-size: 18px;
   font-family: Barlow, sans-serif;
   font-weight: 600;
   color: hsl(213deg, 9%, 39%);
@@ -179,10 +187,10 @@ html {
   font-family: Fraunces, sans-serif;
   font-weight: 900;
   margin: 3rem 1.5rem 1.5rem 1.5rem;
-  font-size: 2.21rem;
+  font-size: 32px;
 }
 .stand-out-text p {
-  font-size: 22px;
+  font-size: 18px;
   font-family: Barlow, sans-serif;
   font-weight: 600;
   color: hsl(213deg, 9%, 39%);
@@ -280,6 +288,7 @@ html {
   color: hsl(210deg, 4%, 67%);
   font-family: Fraunces, sans-serif;
   font-weight: 700;
+  letter-spacing: 0.2rem;
 }
 .testimonials .emily {
   align-items: center;
@@ -368,7 +377,7 @@ html {
 
 .img-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 .img-grid img {
   width: 100%;
@@ -412,18 +421,24 @@ footer .courtesy {
   text-align: center;
   font-family: Barlow, sans-serif;
   font-size: 1.2rem;
-  padding: 3rem auto;
+  padding-top: 0.3rem;
+  padding-bottom: 0.5rem;
   background-color: hsl(213deg, 9%, 39%);
   position: -webkit-sticky;
   position: sticky;
-  color: hsl(7deg, 99%, 70%);
+  color: pink;
 }
 footer .courtesy a {
-  color: pink;
+  color: hsl(7deg, 99%, 70%);
+}
+footer .courtesy a:hover {
+  color: #3ebfff;
+  transition: 0.3s;
 }
 
 .show-menu {
-  opacity: 1;
+  display: block;
+  transition: 0.3s;
 }
 
 .toggle .bar1 {
@@ -440,70 +455,146 @@ footer .courtesy a {
   transition: 0.3s;
 }
 
-@media only screen and (min-width: 830px) {
+@media only screen and (min-width: 580px) {
+  .container .arrow {
+    position: relative;
+    top: 50%;
+  }
+}
+@media only screen and (min-width: 912px) {
+  body {
+    margin-right: 0;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+    width: 100%;
+  }
   .container {
     background: url(/images/desktop/image-header.jpg);
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
     z-index: -1;
   }
-  .burger-menu div {
+  .container .arrow {
+    position: relative;
+    top: 40%;
+  }
+  .container h1 span {
+    display: unset;
+  }
+  .container .burger-menu div {
     display: none;
   }
-  nav {
-    background: none;
-  }
-  .nav-menu {
-    opacity: 1;
-    transition: 0.3s;
-    z-index: 1;
-    position: relative;
-    background: none;
-    left: 0;
+  .container nav {
     transform: translateX(0%);
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0;
-    margin-top: 0;
+    position: unset;
+    background: none;
+    transition: 0.3s;
+    z-index: 999;
     -webkit-clip-path: unset;
             clip-path: unset;
   }
-  .nav-menu ul {
-    text-align: left;
-    margin: 0;
+  .container nav ul {
+    display: flex;
+    position: absolute;
+    top: -50px;
+    right: -80px;
+    float: right;
+    margin-top: 0;
   }
-  .nav-menu li {
-    padding: 0;
+  .container nav ul .nav-list {
+    color: hsl(0deg, 0%, 100%);
   }
-  .nav-menu .nav-list {
-    color: hsl(168deg, 34%, 41%);
-    font-family: Barlow, sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-  }
-  .nav-menu .nav-list:hover {
-    color: #3ebfff;
-  }
-  .nav-menu button {
-    border: none;
-    border-radius: 3rem;
-    background: hsl(51deg, 100%, 49%);
-    padding: 0.8rem 1.5rem;
-    margin-bottom: 1rem;
-  }
-  .nav-menu button a {
-    color: black;
-    font-family: Fraunces, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-  }
-  .nav-menu button:hover {
-    background: black;
+  .container nav ul .nav-list:hover {
+    color: #feb800;
     transition: 0.3s;
   }
-  .nav-menu button:hover a {
-    color: hsl(51deg, 100%, 49%);
+  .container nav ul button {
+    margin-top: -12px;
+    background: hsl(0deg, 0%, 100%);
+  }
+  .container nav {
+    display: block;
+  }
+  .transform {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "left right";
+  }
+  .transform .transform-text {
+    grid-area: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .transform .transform-text h2 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+  .transform .transform-text h2 span {
+    display: block;
+  }
+  .transform .transform-text p {
+    text-align: left;
+  }
+  .transform .transform-text h4 {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .stand-out {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0;
+  }
+  .stand-out .stand-out-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .stand-out .stand-out-text h2 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+  .stand-out .stand-out-text p {
+    text-align: left;
+  }
+  .stand-out .stand-out-text h4 {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .graphic-photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .graphic-photo .graphic-design {
+    position: relative;
+  }
+  .graphic-photo .graphic-design .graphic-design-main {
+    position: absolute;
+    top: 55%;
+  }
+  .graphic-photo .photography {
+    position: relative;
+  }
+  .graphic-photo .photography .photography-main {
+    position: absolute;
+    top: 55%;
+  }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */
